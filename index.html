@@ -8,11 +8,28 @@
   <title>Decodificador de texto</title>
 </head>
 <body>
-  <div class="wrapper">
-    <div></div>
-    <div></div>
-    <div></div>
+  <main class="wrapper">
+    <header class="header">
+      <img class="logo" src="./img/logo.svg" alt="">
 
-  </div>
+    </header>
+    
+    <section class="input-message">
+      <label for="message"></label>
+      <textarea class="message" id="message" name="message" placeholder="Digite seu texto"></textarea>
+      <p class="warning-message"> <img class="img-exclamation" src="./img/iconExclamation.svg">  Apenas letras minúsculas e sem acento</p>
+      <div class="buttons">
+        <button class="encrypt">Criptografar</button>
+        <button class="decrypt">Decriptografar</button>
+      </div>
+    </section>
+
+    <div class="out-message-encrypt">
+      <img class="img-not-message" src="./img/notMessagem.svg" alt="">
+      <p class="out-message">Nenhuma mensagem encontrada</p>
+      <p class="out-message-help">Digite um texto que você deseja Criptografar ou descriptografar</p>
+      <button class="button-copy">Copiar</button>
+    </div>
+  </main>
 </body>
 </html>
