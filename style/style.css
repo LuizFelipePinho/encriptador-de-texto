@@ -1,17 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto:wght@300;400;500&display=swap');
+
 * {
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1.2fr;
-  height: 100vh;
+/* celular tipo1  */
+@media (max-width: 480px)  {
+  .wrapper {
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 1fr ;
+    height: 100vh;
+  }
+  
+  .header, .input-message, .out-message-encrypt {
+    background-color: #ffff;
+    height: 100%;
+  }
+
+  
+  .message {
+    font-weight: 500;
+    justify-content: stretch;
+    width: 100%;
+    height: 55%;
+    font-size: 2em;
+    color: #0A3871;
+  }
+
+  .message:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+  }
+
+  .message::placeholder {
+    color: #0A3871;
+  }
+
+  .warning-message {
+    margin: 0;
+    margin-bottom: 0.5em;
+    color: #343A40;
+    font-size: 0.7em;
+    display: flex;
+    align-items: center;
+  }
+
+  .img-exclamation {
+    height: 1em;
+    margin-right: 0.5em;
+  }
+
+  .buttons {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+    
+  }
+  .encrypt {
+    background: #0A3871;
+    border: none;
+    color: #ffff;
+    padding: 1.2em;
+    border-radius: 1rem;
+  }
+
+  .decrypt {
+    border: solid #0A3871 1px;
+    color: #0A3871;
+    padding: 1.2em;
+    border-radius: 1rem;
+  }
+
+  .out-message-encrypt {
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .out-message {
+    text-align: center;
+    font-weight: bold;
+    font-size:1.3em;
+    margin: 0;
+  }
+
+  .out-message-help {
+    text-align: center;
+    font-weight: 400;
+    opacity: 1;
+    font-size: 0.9em;
+    color: grey;
+  }
+
+  .button-copy {
+    display: none;
+  }
+
 }
 
-div {
-  height: 100%;
-
-  border: solid black 2px;
-}
