@@ -7,7 +7,8 @@ const getTextInput = () => {
   const textInput = document.getElementById("message");
   const cryptography = new Cryptography(textInput.value); 
   // cryptography.encrypt();
-  console.log(cryptography.encrypt());
+  // cryptography.decrypt()
+  
 }
 
 
