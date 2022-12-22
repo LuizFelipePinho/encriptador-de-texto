@@ -3,26 +3,26 @@ import { TextPassRequirements } from "./TextRequirements.js";
 export class Cryptography {
   constructor(text) {
     this.text = text;
-    this.cifra = [
+    this.cipher = [
       {
-        valor: "e",
-        chave: "enter",
+        value: "e",
+        key: "enter",
       },
       {
-        valor: "i",
-        chave: "imes",
+        value: "i",
+        key: "imes",
       },
       {
-        valor: "a",
-        chave: "ai",
+        value: "a",
+        key: "ai",
       },
       {
-        valor: "o",
-        chave: "ober",
+        value: "o",
+        key: "ober",
       },
       {
-        valor: "u",
-        chave: "ufat",
+        value: "u",
+        key: "ufat",
       },
     ];
   }
@@ -32,12 +32,11 @@ export class Cryptography {
       return "Digite apenas letras minusculas e sem acento";
     }
 
-    let textCrip = this.text;
-    this.cifra.forEach((element) => {
-      textCrip = textCrip.replaceAll(element.valor, element.chave);
+    let textCryp = this.text;
+    this.cipher.forEach((element) => {
+      textCryp = textCryp.replaceAll(element.value, element.key);
     });
-
-    return textCrip;
+    return textCryp;
   };
 
   decrypt = () => {
@@ -45,11 +44,11 @@ export class Cryptography {
       return "Digite apenas letras minusculas e sem acento";
     }
 
-    let textCrip = this.text;
-    this.cifra.forEach((element) => {
-      textCrip = textCrip.replaceAll(element.chave, element.valor);
+    let textCryp = this.text;
+    this.cipher.forEach((element) => {
+      textCryp = textCryp.replaceAll(element.key, element.value);
     });
 
-    return textCrip;
+    return textCryp;
   };
 }
