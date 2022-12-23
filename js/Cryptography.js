@@ -28,10 +28,6 @@ export class Cryptography {
   }
 
   encrypt = () => {
-    if (!TextPassRequirements(this.text)) {
-      return "Digite apenas letras minusculas e sem acento";
-    }
-
     let textCryp = this.text;
     this.cipher.forEach((element) => {
       textCryp = textCryp.replaceAll(element.value, element.key);
@@ -40,10 +36,6 @@ export class Cryptography {
   };
 
   decrypt = () => {
-    if (!TextPassRequirements(this.text)) {
-      return "Digite apenas letras minusculas e sem acento";
-    }
-
     let textCryp = this.text;
     this.cipher.forEach((element) => {
       textCryp = textCryp.replaceAll(element.key, element.value);

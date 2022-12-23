@@ -8,7 +8,7 @@ export class Screen {
     const textInput = document.getElementById("message");
 
     if (!TextPassRequirements(textInput.value)) {
-      return "Digite apenas letras minusculas e sem acento";
+      return false;
     }
     return textInput.value;
     
