@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto:wght@300;400;500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto:wght@300;400;500&display=swap'); */
 
 * {
   padding: 0;
@@ -97,14 +97,14 @@ body {
     height: 100%;
   }
 
-  .out-message {
+  .out-message-not-found {
     text-align: center;
     font-weight: bold;
     font-size:1.3em;
     margin: 0;
   }
 
-  .out-message-help {
+  .out-message {
     text-align: center;
     font-weight: 400;
     opacity: 1;
@@ -118,6 +118,15 @@ body {
 
   .img-not-message {
     display: none;
+  }
+
+  .out-message-cript {
+    word-break: break-all;
+    color: grey;
+    font-size: 1em;
+    height: 100%;
+    max-width: 100%;
+    text-align: justify;
   }
 
 }
@@ -218,6 +227,7 @@ body {
   .img-not-message {
     display: block;
     height: 50%;
+    width: 100%;
   }
 
   .out-message-encrypt {

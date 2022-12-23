@@ -10,16 +10,18 @@ class Main {
 
     if(!textInput) {
       // chamar a função de printar na tela com essa mensagem
-      console.log("Digite apenas letras minusculas e sem acento");
+      screen.setTextOut("Digite apenas letras minusculas e sem acento");
+
     } else {
       const cryptography = new Cryptography(textInput); 
       const textInputCrypt = cryptography.encrypt();
-      console.log(textInputCrypt); 
       //agora falta printar na tela passando como parametro o texto criptografado
+      screen.setTextOut(textInputCrypt);
     }
   }
 
   performDecrypt = () => {
+    
     const screen = new Screen;
     const textInput = screen.getTextInput();
 
@@ -29,8 +31,9 @@ class Main {
     } else {
       const cryptography = new Cryptography(textInput); 
       const textInputCrypt = cryptography.decrypt();
-      console.log(textInputCrypt); 
       //agora falta printar na tela passando como parametro o texto criptografado
+      screen.setTextOut(textInputCrypt);
+    
     }
 
   }
