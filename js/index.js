@@ -1,17 +1,38 @@
 import { Cryptography }  from "./Cryptography.js";
+import { Screen } from "./Screen.js";
 
-const buttonEncrypt = document.getElementsByClassName("encrypt");
 
-
-const getTextInput = () => {
-  const textInput = document.getElementById("message");
-  const cryptography = new Cryptography(textInput.value); 
- 
-  // console.log(cryptography.encrypt());
+class Main {
   
-  console.log(cryptography.decrypt());
+  performEncrypt = () => {
+    const screen = new Screen;
+    const textInput = screen.getTextInput();
+    const cryptography = new Cryptography(textInput); 
+    const textInputCrypt = cryptography.encrypt();
+    console.log(textInputCrypt); 
+    //agora falta printa na tela
+
+  }
+
+  performDecrypt = () => {
+    const screen = new Screen;
+    const textInput = screen.getTextInput();
+    const cryptography = new Cryptography(textInput); 
+    const textInputCrypt = cryptography.decrypt();
+    console.log(textInputCrypt); 
+    //agora falta printa na tela
+
+  }
+
+
 }
 
+const main = new Main;
 
-buttonEncrypt[0].addEventListener("click", getTextInput);
+const buttonEncrypt = document.getElementsByClassName("encrypt");
+buttonEncrypt[0].addEventListener("click", main.performEncrypt);
 
+const buttonDecrypt = document.getElementsByClassName("decrypt");
+buttonDecrypt[0].addEventListener("click", main.performDecrypt);
+
+  
