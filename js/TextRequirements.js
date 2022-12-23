@@ -1,5 +1,3 @@
-// Deve funcionar apenas com letras minúsculas
-// - Não devem ser utilizados letras com acentos nem caracteres especiais
 
 // retorna true se passar em todos os requisitos  
 export const TextPassRequirements = (text) => {

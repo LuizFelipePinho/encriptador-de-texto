@@ -1,8 +1,7 @@
-import { TextPassRequirements } from "./TextRequirements.js";
-
+// criptografa e descriptografa o texto
 export class Cryptography {
-  constructor(text) {
-    this.text = text;
+  constructor() {
+    this.text = '';
     this.cipher = [
       {
         value: "e",
@@ -43,4 +42,8 @@ export class Cryptography {
 
     return textCryp;
   };
+
+  setText = (text) => {
+    this.text = text;
+  }
 }
