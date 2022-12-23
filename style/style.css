@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto:wght@300;400;500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto:wght@300;400;500&display=swap');
 
 * {
   padding: 0;
@@ -79,24 +79,37 @@ body {
     color: #FFFFFF;
     padding: 1.2em;
     border-radius: 1rem;
+    cursor: pointer;
+
   }
 
-  .decrypt {
+  .decrypt, .button-copy {
     border: solid #0A3871 1px;
     color: #0A3871;
     padding: 1.2em;
     border-radius: 1rem;
     background-color: #D8DFE8;
+    cursor: pointer;
   }
 
+  .button-copy:focus {
+    background-color: #0A3871;
+    color: #D8DFE8;
+    transition: 10ms;
+  } 
+  
+  .button-copy {
+    display: none;
+  }
+
+
   .out-message-encrypt {
-    padding: 0.2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
-  }
 
+  }
   .out-message-not-found {
     text-align: center;
     font-weight: bold;
@@ -110,11 +123,10 @@ body {
     opacity: 1;
     font-size: 0.9em;
     color: grey;
+
   }
 
-  .button-copy {
-    display: none;
-  }
+  
 
   .img-not-message {
     display: none;

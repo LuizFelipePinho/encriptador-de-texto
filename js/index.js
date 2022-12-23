@@ -38,3 +38,12 @@ buttonEncrypt[0].addEventListener("click", main.performEncrypt);
 
 const buttonDecrypt = document.getElementsByClassName("decrypt");
 buttonDecrypt[0].addEventListener("click", main.performDecrypt);
+
+async function clipboardCopy() {
+  let text = document.querySelector("#out-message-copie").textContent;
+  await navigator.clipboard.writeText(text);
+}
+
+document.getElementById('clipboardCopy').addEventListener('click', clipboardCopy);
+
+ 

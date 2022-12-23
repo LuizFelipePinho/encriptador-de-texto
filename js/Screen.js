@@ -25,5 +25,33 @@ export class Screen {
     const messageHelp = document.getElementsByClassName("out-message");
     messageHelp[0].className = "out-message out-message-cript";
     messageHelp[0].innerText = `${txt}`;
+    messageHelp[0].style = `
+     
+      margin: 0;
+      padding: 0;
+      height: 80%
+      
+    `
+
+
+    const buttonCopy = document.getElementsByClassName("button-copy")
+    buttonCopy[0].style = `
+    display: block;
+    `
+
+
+
+    const containerOutText = document.getElementsByClassName("out-message-encrypt");
+    containerOutText[0].style = `
+    margin: 0;
+    padding-top: 2em;
+    display: flex; 
+    justify-content: space-between;
+    height: 100%;
+
+    `
+
   };
+
+
 }
