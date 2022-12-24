@@ -25,6 +25,7 @@ class Main {
     if (!textInput) {
       this.screen.setTextOut("Digite apenas letras minusculas e sem acento");
     } else {
+      this.cryptography.setText(textInput);
       const textInputCrypt = this.cryptography.decrypt();
       this.screen.setTextOut(textInputCrypt);
     }
