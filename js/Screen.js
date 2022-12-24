@@ -31,17 +31,16 @@ export class Screen {
       padding: 0;
       height: 80%
       
-    `
+    `;
 
-
-    const buttonCopy = document.getElementsByClassName("container-button-copy")
+    const buttonCopy = document.getElementsByClassName("container-button-copy");
     buttonCopy[0].style = `
     display: flex;
-    `
+    `;
 
-
-
-    const containerOutText = document.getElementsByClassName("out-message-encrypt");
+    const containerOutText = document.getElementsByClassName(
+      "out-message-encrypt"
+    );
     containerOutText[0].style = `
     margin: 0;
     padding-top: 2em;
@@ -49,9 +48,6 @@ export class Screen {
     justify-content: space-between;
     height: 100%;
 
-    `
-
+    `;
   };
-
-
 }
