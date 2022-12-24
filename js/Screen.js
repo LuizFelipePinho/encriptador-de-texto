@@ -34,9 +34,9 @@ export class Screen {
     `
 
 
-    const buttonCopy = document.getElementsByClassName("button-copy")
+    const buttonCopy = document.getElementsByClassName("container-button-copy")
     buttonCopy[0].style = `
-    display: block;
+    display: flex;
     `
 
 
