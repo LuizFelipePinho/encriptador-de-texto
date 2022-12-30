@@ -1,4 +1,5 @@
 import { Cryptography } from "../Model/Cryptography.js";
+import { ValidText } from "../Model/ValidText.js";
 import { Screen } from "../View/Screen.js";
 // o controller é o cara que vai juntar o model com view 
 
@@ -7,27 +8,30 @@ class Main {
   constructor() {
     this.screen = new Screen();
     this.cryptography = new Cryptography();
+    this.validText = new ValidText();
   }
 
   performEncrypt = () => {
-    const textInput = this.screen.getTextInput();
+    const resultValid = this.validText.validRequirements(this.screen.getTextInput());
 
-    if (!textInput) {
-      this.screen.setTextOut("Digite apenas letras minusculas e sem acento");
+    if (!resultValid.passad) {
+      this.screen.setTextOut(resultValid.message)
+        
     } else {
-      this.cryptography.setText(textInput);
+      this.cryptography.setText(resultValid.message);
       const textInputCrypt = this.cryptography.encrypt();
       this.screen.setTextOut(textInputCrypt);
     }
   };
 
   performDecrypt = () => {
-    const textInput = this.screen.getTextInput();
+    const resultValid = this.validText.validRequirements(this.screen.getTextInput());
 
-    if (!textInput) {
-      this.screen.setTextOut("Digite apenas letras minusculas e sem acento");
+    if (!resultValid.passad) {
+      this.screen.setTextOut(resultValid.message)
+        
     } else {
-      this.cryptography.setText(textInput);
+      this.cryptography.setText(resultValid.message);
       const textInputCrypt = this.cryptography.decrypt();
       this.screen.setTextOut(textInputCrypt);
     }

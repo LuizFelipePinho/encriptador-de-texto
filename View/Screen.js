@@ -1,13 +1,10 @@
-import { TextPassRequirements } from "../Model/TextRequirements.js";
+
 
 // metodos referentes a tela como o pegar e mostra na tela o texto, além disso valida o texto
 export class Screen {
   getTextInput = () => {
     const textInput = document.getElementById("message");
 
-    if (!TextPassRequirements(textInput.value)) {
-      return false;
-    }
     return textInput.value;
   };
 
