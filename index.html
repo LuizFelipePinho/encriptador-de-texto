@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="./View/style/style.css">
   <title>Decodificador de texto</title>
 </head>
 <body>
   <main class="wrapper">
     <header class="header">
-      <img class="logo" src="./img/logo.svg" alt="">
+      <img class="logo" src="./View/img/logo.svg" alt="">
 
     </header>
     
     <section class="input-message">
       <label for="message"></label>
       <textarea class="message" id="message" name="message" placeholder="Digite seu texto"></textarea>
-      <p class="warning-message"> <img class="img-exclamation" src="./img/iconExclamation.svg">  Apenas letras minúsculas e sem acento</p>
+      <p class="warning-message"> <img class="img-exclamation" src="./View/img/iconExclamation.svg">  Apenas letras minúsculas e sem acento</p>
       <div class="buttons">
         <button class="encrypt">Criptografar</button>
         <button class="decrypt">Decriptografar</button>
@@ -25,7 +25,7 @@
     </section>
     
     <div class="out-message-encrypt">
-      <img class="img-not-message" src="./img/notMessagem.svg" alt="">
+      <img class="img-not-message" src="./View/img/notMessagem.svg" alt="">
       <p class="out-message-not-found">Nenhuma mensagem encontrada</p>
       <p class="out-message" id="out-message-copie">Digite um texto que você deseja criptografar ou descriptografar</p>
       <div class="container-button-copy">
@@ -35,7 +35,5 @@
     </div>
   </main>
 </body>
-<script type="module" src="./js/TextRequirements.js"></script>
-<script type="module" src="./js/Cryptography.js"></script>
-<script type="module" src="./js/index.js"></script>
+<script type="module" src="./Controller/Main.js"></script>
 </html>

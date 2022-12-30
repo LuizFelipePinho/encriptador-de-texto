@@ -1,4 +1,4 @@
-import { TextPassRequirements } from "./TextRequirements.js";
+import { TextPassRequirements } from "../Model/TextRequirements.js";
 
 // metodos referentes a tela como o pegar e mostra na tela o texto, além disso valida o texto
 export class Screen {
@@ -10,6 +10,7 @@ export class Screen {
     }
     return textInput.value;
   };
+
 
   setTextOut = (txt) => {
     const imgOut = document.getElementsByClassName("img-not-message");
@@ -49,5 +50,24 @@ export class Screen {
     height: 100%;
 
     `;
+  };
+
+  setFunctionButtonEncript = (func) => {
+    const buttonEncrypt = document.getElementsByClassName("encrypt");
+    buttonEncrypt[0].addEventListener("click", func);
+  };
+
+  setFunctionButtonDecrypt = (func) => {
+    const buttonDecrypt = document.getElementsByClassName("decrypt");
+    buttonDecrypt[0].addEventListener("click", func);
+  };
+
+  setFunctionButtonCopy = () => {
+    async function clipboardCopy() {
+      let text = document.querySelector("#out-message-copie").textContent;
+      await navigator.clipboard.writeText(text);
+    }
+
+    document.getElementById("clipboardCopy").addEventListener("click", clipboardCopy);
   };
 }

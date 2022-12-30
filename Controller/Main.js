@@ -1,5 +1,7 @@
-import { Cryptography } from "./Cryptography.js";
-import { Screen } from "./Screen.js";
+import { Cryptography } from "../Model/Cryptography.js";
+import { Screen } from "../View/Screen.js";
+// o controller é o cara que vai juntar o model com view 
+
 
 class Main {
   constructor() {
@@ -30,21 +32,20 @@ class Main {
       this.screen.setTextOut(textInputCrypt);
     }
   };
+
+
+  inicialize = () => {
+    this.screen.setFunctionButtonEncript(this.performEncrypt);
+    this.screen.setFunctionButtonDecrypt(this.performDecrypt);
+    this.screen.setFunctionButtonCopy();
+  }
+
 }
 
 const main = new Main();
+main.inicialize();
 
-const buttonEncrypt = document.getElementsByClassName("encrypt");
-buttonEncrypt[0].addEventListener("click", main.performEncrypt);
 
-const buttonDecrypt = document.getElementsByClassName("decrypt");
-buttonDecrypt[0].addEventListener("click", main.performDecrypt);
 
-async function clipboardCopy() {
-  let text = document.querySelector("#out-message-copie").textContent;
-  await navigator.clipboard.writeText(text);
-}
-
-document.getElementById('clipboardCopy').addEventListener('click', clipboardCopy);
 
  
