@@ -1,43 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto:wght@300;400;500&display=swap");
 
 * {
   padding: 0;
   border: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-  background: #E5E5E5;
-
+  background: #e5e5e5;
 }
 
-
 /* mobile  */
-@media (min-width: 0px)  {
+@media (min-width: 0px) {
   .wrapper {
     display: grid;
-    grid-template-rows: 0.5fr 2fr 1fr ;
+    grid-template-rows: 0.5fr 2fr 1fr;
     height: 100vh;
-    background: #E5E5E5;
+    background: #e5e5e5;
   }
-  
-  .header, .input-message, .out-message-encrypt {
+
+  .header,
+  .input-message,
+  .out-message-encrypt {
     height: 100%;
-    background: #E5E5E5;
-
+    background: #e5e5e5;
   }
 
-  
   .message {
     font-weight: 500;
     justify-content: stretch;
     width: 100%;
     height: 55%;
     font-size: 2em;
-    color: #0A3871;
-    background: #E5E5E5;
-
+    color: #0a3871;
+    background: #e5e5e5;
+    resize: none;
+    margin-bottom: 1rem;
   }
 
   .message:focus {
@@ -47,13 +46,13 @@ body {
   }
 
   .message::placeholder {
-    color: #0A3871;
+    color: #0a3871;
   }
 
   .warning-message {
     margin: 0;
     margin-bottom: 0.5em;
-    color: #343A40;
+    color: #343a40;
     font-size: 0.7em;
     display: flex;
     align-items: center;
@@ -66,79 +65,56 @@ body {
 
   .buttons {
     width: 100%;
-    height: 35%;
+    height: 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 8%;
-    
   }
   .encrypt {
-    background: #0A3871;
+    background: #0a3871;
     border: none;
-    color: #FFFFFF;
+    color: #ffffff;
     padding: 1.2em;
     border-radius: 1rem;
     cursor: pointer;
-
   }
 
-  .decrypt, .button-copy {
-    border: solid #0A3871 1px;
-    color: #0A3871;
+  .decrypt,
+  .button-copy {
+    border: solid #0a3871 1px;
+    color: #0a3871;
     padding: 1.2em;
     border-radius: 1rem;
-    background-color: #D8DFE8;
+    background-color: #d8dfe8;
     cursor: pointer;
   }
 
   .button-copy:focus {
-    background-color: #0A3871;
-    color: #D8DFE8;
+    background-color: #0a3871;
+    color: #d8dfe8;
     transition: 10ms;
-  } 
+  }
 
   .button-copy {
     background-color: white;
     width: 100%;
   }
-  
-  .container-button-copy {
-    display: flex;
-    height: 60%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    display: none;
-  }
-
 
   .out-message-encrypt {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    padding: 2em 2em 0em 2em;  
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 1em;
-    box-shadow: 1px 6px 10px -4px rgba(0,0,0,0.2);
-    height: 100%;  
-
+    box-shadow: 1px 6px 10px -4px rgba(0, 0, 0, 0.2);
   }
-
-  /* .out-message-encrypt {
-    background-color: #FFFFFF;
-    border-radius: 1em;
-    box-shadow: 1px 6px 10px -4px rgba(0,0,0,0.2);
-    height: 100%;
-
-  } */
-
 
   .out-message-not-found {
     text-align: center;
     font-weight: bold;
-    font-size:1.3em;
+    font-size: 1.3em;
     margin: 0;
   }
 
@@ -148,48 +124,81 @@ body {
     opacity: 1;
     font-size: 0.9em;
     color: grey;
-
   }
-
-  
 
   .img-not-message {
     display: none;
   }
 
-  .out-message-cript {
+  .out-message-cript,
+  .new {
     word-break: break-all;
     color: grey;
     font-size: 1em;
-    height: 100%;
     max-width: 100%;
     text-align: justify;
   }
 
+  .container-out-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0rem 1rem 0 1rem;
+  }
+
+  .new {
+    max-height: 10vh;
+    overflow: clip;
+  }
+
+  .container-button-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .container-button-copy,
+  .buttons {
+    padding-bottom: 1rem;
+  }
+
+  .message {
+    font-size: 200%;
+  }
+
+  .container-default {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .not-active {
+    display: none;
+  }
 }
 
 /* tablet */
 @media (min-width: 481px) and (max-width: 800px) {
   .buttons {
     width: 100%;
-    height: 17%;
+    height: 20%;
     display: flex;
     flex-direction: row;
     gap: 8%;
   }
   .encrypt {
-    background: #0A3871;
+    background: #0a3871;
     border: none;
     color: #ffff;
     border-radius: 1rem;
     align-self: stretch;
     flex-grow: 1;
-
   }
 
   .decrypt {
-    border: solid #0A3871 1px;
-    color: #0A3871;
+    border: solid #0a3871 1px;
+    color: #0a3871;
     border-radius: 1rem;
     flex-grow: 1;
   }
@@ -198,7 +207,15 @@ body {
     display: none;
   }
 
+  .new {
+    max-height: 10vh;
+  }
 
+  .input-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 
 /** desktop */
@@ -209,7 +226,6 @@ body {
     grid-template-columns: 1fr 2.5fr 1.5fr;
     height: 100vh;
     padding: 1em;
-
   }
 
   .header {
@@ -221,14 +237,15 @@ body {
   .input-message {
     width: 100%;
     height: 100%;
+    padding-right: 2em;
     display: flex;
     flex-direction: column;
-    padding-right: 2em;
+    justify-content: space-around;
   }
 
   .message {
     margin-top: 10%;
-    height: 70%;
+    height: 100%;
   }
 
   .warning-message {
@@ -241,9 +258,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    height: 20%;
-    
+    align-items: flex-end;
   }
 
   .encrypt {
@@ -254,25 +269,23 @@ body {
   .decrypt {
     flex-grow: 1;
     cursor: pointer;
-
   }
 
   .img-not-message {
     display: block;
-    height: 50%;
+    height: 70%;
     width: 100%;
   }
 
   .out-message-encrypt {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 1em;
-    box-shadow: 1px 6px 10px -4px rgba(0,0,0,0.2);
+    box-shadow: 1px 6px 10px -4px rgba(0, 0, 0, 0.2);
     height: 100%;
-
   }
 
-
-  .container-button-copy {
-    height: 20%;
+  .new {
+    max-height: 70vh;
   }
+
 }

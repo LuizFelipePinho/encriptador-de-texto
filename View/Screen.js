@@ -7,43 +7,55 @@ export class Screen {
   };
 
   setTextOut = (txt) => {
-    const imgOut = document.getElementsByClassName("img-not-message");
-    const messageNotFound = document.getElementsByClassName(
-      "out-message-not-found"
-    );
 
-    if (imgOut[0] && messageNotFound[0]) {
-      imgOut[0].style = `display: none`;
-      messageNotFound[0].style = `display: none`;
-    }
+    const containerDefault = document.getElementsByClassName("container-default");
+    containerDefault[0].classList.add("not-active")
 
-    const messageHelp = document.getElementsByClassName("out-message");
-    messageHelp[0].className = "out-message out-message-cript";
-    messageHelp[0].innerText = `${txt}`;
-    messageHelp[0].style = `
+    
+    const containerOutText = document.getElementsByClassName("container-out-text");
+    containerOutText[0].classList.remove("not-active");
+    
+    let outMessage = document.getElementsByClassName("new");
+    outMessage[0].innerText = `${txt}`;
+
+
+    // const imgOut = document.getElementsByClassName("img-not-message");
+    // const messageNotFound = document.getElementsByClassName(
+    //   "out-message-not-found"
+    // );
+
+    // if (imgOut[0] && messageNotFound[0]) {
+    //   imgOut[0].style = `display: none`;
+    //   messageNotFound[0].style = `display: none`;
+    // }
+
+    // const messageHelp = document.getElementsByClassName("out-message");
+    // messageHelp[0].className = "out-message out-message-cript";
+    // messageHelp[0].innerText = `${txt}`;
+    // messageHelp[0].style = `
      
-      margin: 0;
-      padding: 0;
-      height: 80%
+    //   margin: 0;
+    //   padding: 0;
+    //   height: 80%
       
-    `;
+    // `;
 
-    const buttonCopy = document.getElementsByClassName("container-button-copy");
-    buttonCopy[0].style = `
-    display: flex;
-    `;
+    // // const buttonCopy = document.getElementsByClassName("container-button-copy");
+    // // buttonCopy[0].style = `
+    // // display: flex;
+    // // `;
 
-    const containerOutText = document.getElementsByClassName(
-      "out-message-encrypt"
-    );
-    containerOutText[0].style = `
-    margin: 0;
-    padding-top: 2em;
-    display: flex; 
-    justify-content: space-between;
-    height: 100%;
+    // const containerOutText = document.getElementsByClassName(
+    //   "out-message-encrypt"
+    // );
+    // containerOutText[0].style = `
+    // margin: 0;
+    // padding-top: 2em;
+    // display: flex; 
+    // justify-content: space-between;
+    // height: 100%;
 
-    `;
+    // `;
   };
 
   setFunctionButtonEncript = (func) => {
@@ -57,6 +69,7 @@ export class Screen {
   };
 
   setFunctionButtonCopy = () => {
+
     async function clipboardCopy() {
       let text = document.querySelector("#out-message-copie").textContent;
       await navigator.clipboard.writeText(text);
