@@ -1,8 +1,7 @@
 import { Cryptography } from "../Model/Cryptography.js";
 import { ValidText } from "../Model/ValidText.js";
 import { Screen } from "../View/Screen.js";
-// o controller é o cara que vai juntar o model com view 
-
+// o controller é o cara que vai juntar o model com view
 
 class Main {
   constructor() {
@@ -12,11 +11,12 @@ class Main {
   }
 
   performEncrypt = () => {
-    const resultValid = this.validText.validRequirements(this.screen.getTextInput());
+    const resultValid = this.validText.validRequirements(
+      this.screen.getTextInput()
+    );
 
     if (!resultValid.passad) {
-      this.screen.setTextOut(resultValid.message)
-        
+      this.screen.setTextOut(resultValid.message);
     } else {
       this.cryptography.setText(resultValid.message);
       const textInputCrypt = this.cryptography.encrypt();
@@ -25,11 +25,12 @@ class Main {
   };
 
   performDecrypt = () => {
-    const resultValid = this.validText.validRequirements(this.screen.getTextInput());
+    const resultValid = this.validText.validRequirements(
+      this.screen.getTextInput()
+    );
 
     if (!resultValid.passad) {
-      this.screen.setTextOut(resultValid.message)
-        
+      this.screen.setTextOut(resultValid.message);
     } else {
       this.cryptography.setText(resultValid.message);
       const textInputCrypt = this.cryptography.decrypt();
@@ -37,19 +38,12 @@ class Main {
     }
   };
 
-
   inicialize = () => {
     this.screen.setFunctionButtonEncript(this.performEncrypt);
     this.screen.setFunctionButtonDecrypt(this.performDecrypt);
     this.screen.setFunctionButtonCopy();
-  }
-
+  };
 }
 
 const main = new Main();
 main.inicialize();
-
-
-
-
- 

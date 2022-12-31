@@ -1,5 +1,3 @@
-
-
 // metodos referentes a tela como o pegar e mostra na tela o texto, além disso valida o texto
 export class Screen {
   getTextInput = () => {
@@ -7,7 +5,6 @@ export class Screen {
 
     return textInput.value;
   };
-
 
   setTextOut = (txt) => {
     const imgOut = document.getElementsByClassName("img-not-message");
@@ -65,6 +62,8 @@ export class Screen {
       await navigator.clipboard.writeText(text);
     }
 
-    document.getElementById("clipboardCopy").addEventListener("click", clipboardCopy);
+    document
+      .getElementById("clipboardCopy")
+      .addEventListener("click", clipboardCopy);
   };
 }
