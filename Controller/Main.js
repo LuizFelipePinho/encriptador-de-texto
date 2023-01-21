@@ -1,7 +1,6 @@
 import { Cryptography } from "../Model/Cryptography.js";
 import { ValidText } from "../Model/ValidText.js";
 import { Screen } from "../View/Screen.js";
-// o controller é o cara que vai juntar o model com view
 
 class Main {
   constructor() {
